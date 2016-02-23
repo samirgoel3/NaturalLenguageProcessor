@@ -2,6 +2,7 @@ package com.alejandrohall.android.naturallenguageprocessor;
 
 import com.alejandrohall.android.naturallenguageprocessor.models.SentimentResponse;
 import com.alejandrohall.android.naturallenguageprocessor.models.StemmingResponse;
+import com.alejandrohall.android.naturallenguageprocessor.models.TagResponse;
 import com.alejandrohall.android.naturallenguageprocessor.types.Language;
 
 import java.io.IOException;
@@ -41,7 +42,13 @@ public class NaturalLanguageProcessor {
         return result;
     }
 
+    public Call<TagResponse> tag(String text, String language, String output){
+        checkTagParameters(text, language, output);
 
+        Call<TagResponse> result = new Call<>(nplService.tagText(text, language, output));
+
+        return result;
+    }
 
 
 
@@ -58,9 +65,17 @@ public class NaturalLanguageProcessor {
         if(text.isEmpty()){
             throw new IllegalArgumentException("Text cannot be empty");
         }else if(text.length() > 80000){
-            throw new IllegalArgumentException("Text cannot be greater than 60000 characters");
-        }else if(language.equals(Language.ENGLISH) && !language.equals(Language.DUTCH) && !language.equals(Language.FRENCH)){
+            throw new IllegalArgumentException("Text cannot be greater than 80000 characters");
+        }else if(!language.equals(Language.ENGLISH) && !language.equals(Language.DUTCH) && !language.equals(Language.FRENCH)){
             throw new IllegalArgumentException("Language not allowed. Only allowed: ENGLISH, DUTCH, FRENCH");
+        }
+    }
+
+    private void checkTagParameters(String text, String language, String output){
+        if(text.isEmpty()){
+            throw new IllegalArgumentException("Text cannot be empty");
+        }else if(text.length() > 2000){
+            throw new IllegalArgumentException("Text cannot be greater than 2000 characters");
         }
     }
     //endregion

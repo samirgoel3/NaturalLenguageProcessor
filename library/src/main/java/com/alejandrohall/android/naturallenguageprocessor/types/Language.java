@@ -20,4 +20,12 @@ public class Language {
     public static String RUSSIAN = "russian";
     public static String SPANISH = "spanish";
     public static String SWEDISH = "swedish";
+    public static String BANGLA = "bangla";
+    public static String CATALAN = "catalan";
+    public static String CHINESE = "chinese";
+    public static String HINDI = "hindi";
+    public static String MARATHI = "marathi";
+    public static String POLISH = "polish";
+    public static String TELUGU = "telugu";
+
 }

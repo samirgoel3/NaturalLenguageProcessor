@@ -15,4 +15,12 @@ public class SentimentResponse {
     public Probability getProbability() {
         return probability;
     }
+
+    @Override
+    public String toString() {
+        return "SentimentResponse{" +
+                "label='" + label + '\'' +
+                ", probability=" + probability +
+                '}';
+    }
 }

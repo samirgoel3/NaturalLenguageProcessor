@@ -20,4 +20,13 @@ public class Probability {
     public double getPos() {
         return pos;
     }
+
+    @Override
+    public String toString() {
+        return "Probability{" +
+                "neg=" + neg +
+                ", neutral=" + neutral +
+                ", pos=" + pos +
+                '}';
+    }
 }

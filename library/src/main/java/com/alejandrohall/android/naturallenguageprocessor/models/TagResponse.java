@@ -1,9 +1,9 @@
 package com.alejandrohall.android.naturallenguageprocessor.models;
 
 /**
- * Created by alejandrohall on 20/02/16.
+ * Created by alejandrohall on 23/02/16.
  */
-public class StemmingResponse {
+public class TagResponse {
 
     private String text;
 
@@ -13,7 +13,7 @@ public class StemmingResponse {
 
     @Override
     public String toString() {
-        return "StemmingResponse{" +
+        return "TagResponse{" +
                 "text='" + text + '\'' +
                 '}';
     }

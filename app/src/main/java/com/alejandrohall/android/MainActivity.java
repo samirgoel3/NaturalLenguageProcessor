@@ -10,8 +10,11 @@ import android.widget.TextView;
 
 import com.alejandrohall.android.naturallenguageprocessor.Callback;
 import com.alejandrohall.android.naturallenguageprocessor.NaturalLanguageProcessor;
+import com.alejandrohall.android.naturallenguageprocessor.models.SentimentResponse;
 import com.alejandrohall.android.naturallenguageprocessor.models.StemmingResponse;
+import com.alejandrohall.android.naturallenguageprocessor.models.TagResponse;
 import com.alejandrohall.android.naturallenguageprocessor.types.Language;
+import com.alejandrohall.android.naturallenguageprocessor.types.Output;
 import com.alejandrohall.android.naturallenguageprocessor.types.StemmingAlgorithm;
 
 public class MainActivity extends AppCompatActivity {
@@ -37,10 +40,10 @@ public class MainActivity extends AppCompatActivity {
         btnStem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                nlp.stem(etText.getText().toString(), Language.ENGLISH, StemmingAlgorithm.PORTER)
-                        .async(new Callback<StemmingResponse>() {
+                nlp.tag(etText.getText().toString(), Language.ENGLISH, Output.TAGGED)
+                        .async(new Callback<TagResponse>() {
                             @Override
-                            public void onResponse(StemmingResponse response) {
+                            public void onResponse(TagResponse response) {
                                 tvResult.setText(response.getText());
                             }
 
