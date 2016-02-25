@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">NLP</string>
+
+    <!-- General -->
+    <string name="here_result">Here the result!</string>
+
+
+    <!-- Stemm -->
+    <string name="hint_stemm">Here the text to Stemm</string>
+    <string name="button_stemm">Stemm!</string>
+
+    <!-- Tag -->
+    <string name="hint_tag">Here the text to Tag</string>
+    <string name="button_tag">Tag!</string>
+
+    <!-- Sentiment Analisys -->
+    <string name="hint_sentiment">Here the text to analyze</string>
+    <string name="button_sentiment">Sentiment analysis!</string>
+
+
+
 </resources>

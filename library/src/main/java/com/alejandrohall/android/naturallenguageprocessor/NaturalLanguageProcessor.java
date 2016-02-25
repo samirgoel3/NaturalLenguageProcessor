@@ -1,11 +1,11 @@
 package com.alejandrohall.android.naturallenguageprocessor;
 
+import com.alejandrohall.android.naturallenguageprocessor.api.NPLService;
+import com.alejandrohall.android.naturallenguageprocessor.callback.Call;
 import com.alejandrohall.android.naturallenguageprocessor.models.SentimentResponse;
 import com.alejandrohall.android.naturallenguageprocessor.models.StemmingResponse;
 import com.alejandrohall.android.naturallenguageprocessor.models.TagResponse;
 import com.alejandrohall.android.naturallenguageprocessor.types.Language;
-
-import java.io.IOException;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

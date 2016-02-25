@@ -1,4 +1,4 @@
-package com.alejandrohall.android.naturallenguageprocessor;
+package com.alejandrohall.android.naturallenguageprocessor.api;
 
 import com.alejandrohall.android.naturallenguageprocessor.models.SentimentResponse;
 import com.alejandrohall.android.naturallenguageprocessor.models.StemmingResponse;

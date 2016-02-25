@@ -1,4 +1,4 @@
-package com.alejandrohall.android.naturallenguageprocessor;
+package com.alejandrohall.android.naturallenguageprocessor.callback;
 
 import com.alejandrohall.android.naturallenguageprocessor.models.StemmingResponse;
 
@@ -8,6 +8,9 @@ import com.alejandrohall.android.naturallenguageprocessor.models.StemmingRespons
 public interface Callback<T> {
 
     void onResponse(T response);
+
+    void onFailure(int errorCode, String errorMsg);
+
     void onError(Throwable e);
 
 }

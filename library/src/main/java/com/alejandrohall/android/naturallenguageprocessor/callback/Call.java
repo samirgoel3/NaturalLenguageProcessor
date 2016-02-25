@@ -1,8 +1,4 @@
-package com.alejandrohall.android.naturallenguageprocessor;
-
-import android.util.Log;
-
-import com.alejandrohall.android.naturallenguageprocessor.models.StemmingResponse;
+package com.alejandrohall.android.naturallenguageprocessor.callback;
 
 import java.io.IOException;
 
@@ -35,7 +31,16 @@ public class Call<T> {
         retrofitCall.enqueue(new retrofit2.Callback<T>() {
             @Override
             public void onResponse(retrofit2.Call<T> call, Response<T> response) {
-                callback.onResponse(response.body());
+                if(response.isSuccess()){
+                    callback.onResponse(response.body());
+                }else{
+                    try {
+                        callback.onFailure(response.code(), response.errorBody().string());
+                    } catch (IOException e) {
+                        callback.onError(e);
+                    }
+                }
+
             }
 
             @Override
