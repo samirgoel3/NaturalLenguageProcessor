@@ -6,8 +6,8 @@
 
 
     <!-- Stemm -->
-    <string name="hint_stemm">Here the text to Stemm</string>
-    <string name="button_stemm">Stemm!</string>
+    <string name="hint_stemm">Here the text to Stem</string>
+    <string name="button_stemm">Stem!</string>
 
     <!-- Tag -->
     <string name="hint_tag">Here the text to Tag</string>
