@@ -4,6 +4,22 @@ NaturalLenguageProcessor is an Android library that wraps text-processing.com AP
 (aqui foto)
 ## Sample project
 
+Add it in your root build.gradle at the end of repositories:
+```java
+	allprojects {
+		repositories {
+			...
+			maven { url "https://jitpack.io" }
+		}
+	}
+```
+Add the dependency
+```java
+	dependencies {
+	        compile 'com.github.alejandrohall:NaturalLenguageProcessor:1.0'
+	}
+```
+
 ## Gradle Dependency
 
 ## Usage
