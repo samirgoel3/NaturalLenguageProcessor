@@ -1,7 +1,7 @@
 # NaturalLenguageProcessor
 [![](https://jitpack.io/v/alejandrohall/NaturalLenguageProcessor.svg)](https://jitpack.io/#alejandrohall/NaturalLenguageProcessor)
 
-NaturalLenguageProcessor is an Android library that wraps text-processing.com API and gives you the posibility to stem, to tag and to analyze sentimentally the text you want. 
+NaturalLenguageProcessor is an Android library that wraps text-processing.com API and gives you the possibility to stem, to tag and to analyze sentimentally the text you want. 
 ## Sample project
 
 Add it in your root build.gradle at the end of repositories:
